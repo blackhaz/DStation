@@ -33,3 +33,32 @@ https://github.com/blackhaz/DStation/blob/master/doc/Algorithm%20Workflow.pdf
 
 This is spaghetti, prototype code. If somebody can help to work on this - please contact me. DStation uses ImageMagick library to work with graphical image formats (TIFF, PNG, etc). 
 
+
+Jupiter from Pic Du Midi and DStation preset: 
+=============================================
+
+https://github.com/blackhaz/DStation/blob/master/doc/Jupiter_Pic_Du_Midi.zip?... 
+(Note: this is a different Jupiter than what is supplied with the Windows build!) 
+
+Quick HOWTO: 
+
+- Launch DStation. 
+- In File menu, Open Image and open the FITS file with Jupiter source image. 
+- In Preset menu, Open Preset and open the D file with DStation preset. 
+- Click on Deconvolve button. 
+
+For blinking, click and hold the Blink button. 
+
+Here is a quick description of Primary preset settings: 
+
+Wavelength: wavelength this image was taken in, 550 nm. 
+Objective Diameter: 1000 mm (1-meter telescope on Pic Du Midi). 
+Objective Focal Length: 20000 mm 
+Focal Length Multiplier: 1.0 (without Barlow lens, focal length as is) 
+CCD Pixel Size: 4.65 microns 
+Filter Size: 10 pixels (size of the smoothing filter S, derived experimentally) 
+Fried's r0 Parameter: 400mm (derived experimentally) 
+Noise Estimation: 0.30 (noise level, derived experimentally) 
+Compression Ratio: 0.94 (r of the compressor, derived experimentally - see eq. 10 in the DStation.pdf, as well as Algorithm Workflow PDF) 
+
+This preset uses Wiener as the filtering method, and Usatov, Atmospheric as the deconvolution algorithm. 
