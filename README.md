@@ -4,7 +4,7 @@ DStation
 DStation is a BSD licensed cross-platform software implementing various image deconvolution methods described in J. S. Lim, “Two-dimensional signal and image processing,”
 Prentice Hall, (1990) and other sources.  
 
-DStation is a GUI testbed for various not so well known image deconvolution algorithms. It can be used for various applications, including astronomical image processing. One of the algorithms implemented was developed by me and is based on a MIT handbook by J. S. Lim, “Two-dimensional signal and image processing,” Prentice Hall, (1990). This method is called "Usatov, Atmospheric" in the DStation, and the description how it works is here: 
+DStation is a GUI testbed for various not so well known image deconvolution algorithms. It can be used for various applications, including astronomical image processing. One of the algorithms implemented was developed by me and is based on a MIT handbook by J. S. Lim. This method is called "Usatov, Atmospheric" in the DStation, and the description how it works is here: 
 
 https://raw.github.com/blackhaz/DStation/master/doc/DStation.pdf 
 
