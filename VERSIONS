@@ -1,0 +1,98 @@
+Version		Release Date		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+v0.5			30 March 2013
+* Code cleanup
+* Moved Frequency Domain Equalizer to "Schafer with Equalizer" deconvolution method. 
+* Added Landweber deconvolution (with transponse).
+* Added Van Cittert deconvolution.
+* Added Sine Relaxed Lucy Richardson (SRLR) deconvolution.
+* Added Maximum A Posteriori (MAP) deconvolution.
+* Added deringing filter.
+* Added warning if HDRI support is not in ImageMagick. 
+* Added feature to use current post-processed image as a reference.
+* Added save/restore preset to memory.
+* Added subtract bias option;
+* Adopted new alpha/beta version naming.
+
+v0.4			21 January 2012
+* Rebuilt for Mac OS X Lion, Qt 4.8.0 and ImageMagick 6.7.4-8 (with OpenCL support, although little is OpenCL-accelerated.)
+* Added image statistics. 
+* Added scroll bar for all settings to fit small monitors.
+* DStation adopts Plastique GUI style for all platforms.
+* DStation adopts FreeBSD license.
+* Some minor modifications to smoothing user interface (removed median, added sigma control, etc) 
+* Added frequency domain equalizer. 
+* Supersampling can now be done in fractional steps. 
+* Fixed major issue with primitive supersampling algorithm. Added supersampling resize algorithm filtering options.  
+* Added CLS (Constrained Least Squares) deconvolution.
+* Added Iterative Inverse Filter deconvolution. 
+* Implemented anti-artifact FFT buffering. 
+* Added low-level brightness/contrast sliders.
+* Added low pass noise filter strength adjustment. 
+* Added focal length multiplier input. 
+* Introduced presets.
+* Optimized maths for Usatov filter. 
+* Added warning if RAM is insufficient to deconvolve in 32-bit Windows build. 
+* Some performance optimizations in the code.
+* Fixed UI state if exception was caught while deconvolution. 
+* Solved file extension problems when saving images.
+* Fixed virtual canvas issues.
+* Added mouse-over tooltips. 
+* Decreased zoom in/out step from 20% to 10%. 
+* Fixed bug with preview frame appearing on blank input image when clicked.  
+* Fixed preview menu initial state on Mac OS X version.
+* Fixed compression ratio to allow 0.01 to 1 range of values. 
+
+v0.3			16 September 2010
+* Resolved exception handling on Windows build by linking statically. Windows build now uses Qt 4.6.2 compiled from source. 
+* Resolved Fourier transform multiple images cache workaround with patched 6.6.4-3 Beta ImageMagick libraries. 
+* Major code clean-up, optimization and some memory leaks prevention.
+* Implemented Wiener filtering in non-HDRI mode that seems to resolve sporadic corrupted image issues - OpenMP-related?
+* Added exception handling to deconvolution process. Now DStation outputs error details if deconvolution has failed. 
+* Added batch folder deconvolution with external filter.
+* Added Wiener deconvolution option with external filter. 
+* Added menu item to save filter image.
+* Added histogram display.
+* Implemented Usatov filter creation stage at low level pixel math.
+* Implemented Dynamic Range Extension at low level pixel math that works much faster. 
+* Added precision control for saved images. Default is 16-bit now. 
+* Implemented Noise To Signal Ratio (NSR) measurement using preview area. Added 32x32 and 64x64 preview area options.
+* Fixed benchmark to display correct results when supersampling is used.
+* Fixed benchmark not to include post-processing stage.
+* Scene falls back to input image if preview is deployed over non-desupersampled deconvolved image.  
+* Fixed minor bugs on post-processing stage image display.
+* All file dialogs now initialize at last opened directory.
+* Moved system-related settings to System tab.
+* Disabled toolbar that is not in use at the current moment.
+* Added about dialog.
+
+v0.2			5 September 2010					
+* Replaced ImageMagick fx operator with low level pixel math that significantly accelerates deconvolution.
+* Added separate RGB wavelengths processing mode (Advanced settings) - results in best images.
+* In central wavelength mode, Green is used as central wavelength now, as most CCD sensors have QE peaking about there.
+* Fixed non-square input image issues. 
+* Fixed out of range RGB values (clamping problem) in image displaying function. 
+* Added preview
+* Added Weighted Usatov with gamma parameter (Advanced settings) for components weights.
+* Introduced post-processing stage to apply additional image manipulations without necessity to re-deconvolve original image.  
+* Dynamic Range Extension now applies on the post-processing stage, so input information is not lost during this procedure.
+* Dynamic Range Extension is disabled when Normalize is turned on.
+* Normalization now applies on the post-processing stage.
+* Added median as smoothing filter option. (Advanced settings)
+* Added smoothing filter variance option. (Advanced settings)
+* GUI input elements are now disabled for settings not used by selected deconvolution algorithm. 
+* Unnecessary functions are not called when building filters.
+* Added automatic noise filter (via ImageMagick enhance operator) to post-processing. 
+* Added button to view normalized real component of Fourier transform of the input image.
+* Fixed minor bug with screen image placement. 
+* Window title now shows input image file name.
+* File save dialog now allows to set file format in a user friendly form. 
+* Console window color changes and deconvolution button is disabled when deconvolution is in progress.
+* Added option to disable post-processing in real time. (Disabled in Windows build by default as it works slow for some reason.)
+* Moved supersampling factor and anti-artifact buffer input to Advanced settings. 
+* Added an option to disable de-supersampling of deconvolved images.
+										
+v0.1 (alpha)	26 August 2010	
+* First alpha version.  
+
+
