@@ -36,10 +36,6 @@ This is spaghetti, prototype code. If somebody can help to work on this - please
 
 Jupiter from Pic Du Midi and DStation preset: 
 =============================================
-
-https://github.com/blackhaz/DStation/blob/master/doc/Jupiter_Pic_Du_Midi.zip?... 
-(Note: this is a different Jupiter than what is supplied with the Windows build!) 
-
 Quick HOWTO: 
 
 - Launch DStation. 
